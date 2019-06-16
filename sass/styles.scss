@@ -1,11 +1,14 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
-
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
-body {
+
+html, body {
+    height: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    background: $grey-darker;
 }
 
 #list {
@@ -18,7 +21,7 @@ body {
 p {
     margin: 0;
     padding: 15px;
-    border: .1px solid darkgray;
+    border: 1px solid $primary;
     height: 200px;
     width: 200px; 
     float: left;
@@ -32,8 +35,7 @@ p {
 
 .shape {
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid darkgray;
+    border: 2px solid $primary;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -47,5 +49,6 @@ p {
     bottom: 3px;
     left: 0;
     right: 0;
+    color: $primary;
 }
 
