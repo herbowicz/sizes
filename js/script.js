@@ -91,15 +91,26 @@ let sizes = [{
 },
 {
     "Print": [
-        { "name": "FB Page Cover", "width": 1640, "height": 664 },
-        { "name": "FB Shared Image", "width": 1200, "height": 630 },
+        { "name": "A3", "width": 297, "height": 420 },
+        { "name": "A4", "width": 210, "height": 297 },
+        { "name": "A5", "width": 297, "height": 420 },
+        { "name": "A6", "width": 210, "height": 297 },
+        { "name": "B3", "width": 297, "height": 420 },
+        { "name": "B4", "width": 210, "height": 297 },
+        { "name": "B5", "width": 297, "height": 420 },
+        { "name": "Business Card", "width": 3.5, "height": 2 },
     ]
 },
 {
     "Photo": [
-        { "name": "VGA", "width": 640, "height": 480 },
-        { "name": "XGA", "width": 1024, "height": 768 },
-        { "name": "HD", "width": 1280, "height": 720 },
+        { "name": "Wallet", "width": 2, "height": 3 },
+        { "name": "Enprint", "width": 3.5, "height": 5 },
+        { "name": "", "width": 5, "height": 7 },
+        { "name": "", "width": 8, "height": 12 },
+        { "name": "", "width": 12, "height": 18 },
+        { "name": "", "width": 16, "height": 24 },
+        { "name": "", "width": 20, "height": 30 },
+        { "name": "", "width": 24, "height": 36 },
     ]
 },
 ];
@@ -137,7 +148,7 @@ function tree(data) {
 
                     var ratio = Math.round((el.width / el.height) * 100) / 100;
 
-                    //console.log(el.width, el.height, ratio)
+                    console.log(el.width, el.height, ratio)
 
                     var maxWidth = 136;
                     var maxHeight = 136;
