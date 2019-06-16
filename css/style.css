@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#list {
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    /* border-bottom: 1px solid turquoise;
+    border-right: 1px solid turquoise; */
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+    /* border-top: 1px solid turquoise;
+    border-left: 1px solid turquoise; */
+    height: 200px;
+    width: 200px; 
+    float: left;
+}
+
+.shape {
+    padding: 20px;
+    border: 1px solid turquoise;
+
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+
+}
+

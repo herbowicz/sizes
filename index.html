@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-foot">
+            <nav class="tabs is-centered is-boxed">
+                <ul>
+                    <li class="tab is-active" onclick="openTab(event,'Social')"><a>Social</a></li>
+                    <li class="tab" onclick="openTab(event,'Screen')"><a>Screen</a></li>
+                    <li class="tab" onclick="openTab(event,'Ads')"><a>Ads</a></li>
+                    <li class="tab" onclick="openTab(event,'Mobile')"><a>Mobile</a></li>
+                    <li class="tab" onclick="openTab(event,'Squares')"><a>Squares</a></li>
+                    <li class="tab" onclick="openTab(event,'Print')"><a>Print</a></li>
+                    <li class="tab" onclick="openTab(event,'Photo')"><a>Photo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container section">
+        <div id="Social" class="content-tab"> </div>
+        <div id="Screen" class="content-tab" style="display:none"> </div>
+        <div id="Ads" class="content-tab" style="display:none"></div>
+        <div id="Mobile" class="content-tab" style="display:none"> </div>
+        <div id="Squares" class="content-tab" style="display:none"></div>
+        <div id="Print" class="content-tab" style="display:none"> </div>
+        <div id="Photo" class="content-tab" style="display:none"> </div>
+    </div>
+
+    <div id="list" />
+
+</body>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="js/script.js"></script>
+
+</html>
