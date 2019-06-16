@@ -131,17 +131,49 @@ function tree(data) {
             for (let i of Object.values(cat)) {
                 i.forEach((el, i) => {
                     var p = document.createElement("p");
+
                     var shape = document.createElement("div");
                     shape.classList.add('shape');
+
+                    var ratio = Math.round((el.width / el.height) * 100) / 100;
+
+                    //console.log(el.width, el.height, ratio)
+
+                    var maxWidth = 136;
+                    var maxHeight = 136;
+
+                    if (el.width >= el.height) {
+                        maxWidth = Math.min(136, el.width / 10);
+                        maxHeight = Math.min(el.height / 10, el.height / el.width * 136);
+                    } else {
+                        maxHeight = Math.min(136, el.height / 10);
+                        maxWidth = Math.min(el.width / 10, el.width / el.height * 136);
+                    }
+
+                    shape.style.width = maxWidth + 'px';
+                    shape.style.height = maxHeight + 'px';
+
+
+                    var shapeContainer = document.createElement("div");
+                    shapeContainer.classList.add('shape-container');
+                    shapeContainer.appendChild(shape);
+
+                    var info = document.createElement("div");
+                    info.classList.add('info');
+
                     var title = document.createElement("h5");
+                    title.style.fontWeight = 'bold';
+
                     var content = document.createElement("div");
 
                     title.appendChild(document.createTextNode(`${el.name}`));
                     content.appendChild(document.createTextNode(`${el.width} x ${el.height} px`));
 
-                    p.appendChild(shape)
-                    p.appendChild(title)
-                    p.appendChild(content)
+                    info.appendChild(title)
+                    info.appendChild(content)
+
+                    p.appendChild(shapeContainer)
+                    p.appendChild(info)
 
                     list.appendChild(p);
 
