@@ -154,7 +154,7 @@ function tree(data) {
             list.innerHTML = "";
             for (let i of Object.values(cat)) {
                 i.forEach((el, i) => {
-                    var p = document.createElement("p");
+                    var tile = document.createElement("p");
 
                     var shape = document.createElement("div");
                     shape.classList.add('shape');
@@ -211,10 +211,10 @@ function tree(data) {
                     info.appendChild(title)
                     info.appendChild(content)
 
-                    p.appendChild(shapeContainer)
-                    p.appendChild(info)
+                    tile.appendChild(shapeContainer)
+                    tile.appendChild(info)
 
-                    list.appendChild(p);
+                    list.appendChild(tile);
 
                 })
             }
