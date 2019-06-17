@@ -182,13 +182,13 @@ function tree(data) {
                     var object = document.createElement("object");
                     object.setAttribute("type", "text/html");
                     object.setAttribute("data", "http://murzyni.com/");
-                    object.style.width = "2500px";
+                    object.style.width = "100%";
                     object.style.height = maxHeight + el.unit;
-                    object.style.transform = "scale(.2)";
-                    object.style.transformOrigin = "top left";
+                    //object.style.transform = "scale(.2)";
+                    //object.style.transformOrigin = "top left";
+                    //object.style.height = maxHeight * 5 + el.unit;
+                    object.style.objectFit = 'cover';
 
-                    object.style.height = maxHeight * 5 + el.unit;
-                    object.style.resize = 'both';
 
                     var shapeContainer = document.createElement("div");
                     shapeContainer.classList.add('shape-container');
@@ -216,6 +216,26 @@ function tree(data) {
 
                     list.appendChild(tile);
 
+
+
+                    var ancestor = document.createElement("div");
+                    var parent = document.createElement("div");
+                    var child = document.createElement("article");
+                    var title = document.createElement("p");
+                    var subtitle = document.createElement("p");
+
+                    ancestor.classList.add('tile', 'is-ancestor');
+                    parent.classList.add('tile', 'is-parent');
+                    child.classList.add('tile', 'is-child', 'box');
+                    title.classList.add('title');
+                    subtitle.classList.add('subtitle');
+                    title.innerText = "Z petli";
+
+                    list.appendChild(ancestor);
+                    ancestor.appendChild(parent);
+                    parent.appendChild(child);
+                    child.appendChild(title);
+                    child.appendChild(subtitle);
                 })
             }
         }

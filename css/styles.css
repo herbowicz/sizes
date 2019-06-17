@@ -6993,6 +6993,10 @@ p {
   left: 0;
   right: 0; }
 
+object {
+  height: 60px;
+  width: 90px; }
+
 .info {
   position: absolute;
   bottom: 3px;
