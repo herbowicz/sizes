@@ -30,12 +30,12 @@ p {
 
 .shape-container {
     position: relative;
-    height: 136px;
+    height: 125px;
 }
 
 .shape {
     margin: 0 auto;
-    border: 2px solid $primary;
+    border: .5px solid $primary;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
