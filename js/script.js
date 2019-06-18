@@ -154,7 +154,7 @@ function tree(data) {
             list.innerHTML = "";
             for (let i of Object.values(cat)) {
                 i.forEach((el, i) => {
-                    var tile = document.createElement("p");
+                    // var tile = document.createElement("p");
 
                     var shape = document.createElement("div");
                     shape.classList.add('shape');
@@ -163,15 +163,15 @@ function tree(data) {
 
                     console.log(el.width, el.height, ratio)
 
-                    var maxWidth = 136;
-                    var maxHeight = 136;
+                    var maxWidth = 200;
+                    var maxHeight = 200;
 
                     if (el.width >= el.height) {
-                        maxWidth = Math.min(136, el.width / 10);
-                        maxHeight = Math.min(el.height / 10, el.height / el.width * 136);
+                        maxWidth = Math.min(200, el.width / 10);
+                        maxHeight = Math.min(el.height / 10, el.height / el.width * 200);
                     } else {
-                        maxHeight = Math.min(136, el.height / 10);
-                        maxWidth = Math.min(el.width / 10, el.width / el.height * 136);
+                        maxHeight = Math.min(200, el.height / 10);
+                        maxWidth = Math.min(el.width / 10, el.width / el.height * 200);
                     }
 
                     shape.style.width = maxWidth + el.unit;
@@ -211,31 +211,24 @@ function tree(data) {
                     info.appendChild(title)
                     info.appendChild(content)
 
-                    tile.appendChild(shapeContainer)
-                    tile.appendChild(info)
-
-                    list.appendChild(tile);
-
-
-
-                    var ancestor = document.createElement("div");
-                    var parent = document.createElement("div");
-                    var child = document.createElement("article");
+                    // var ancestor = document.createElement("div");
+                    // var parent = document.createElement("div");
+                    var column = document.createElement("div");
                     var title = document.createElement("p");
-                    var subtitle = document.createElement("p");
+                    var screen = document.createElement("p");
 
-                    ancestor.classList.add('tile', 'is-ancestor');
-                    parent.classList.add('tile', 'is-parent');
-                    child.classList.add('tile', 'is-child', 'box');
-                    title.classList.add('title');
-                    subtitle.classList.add('subtitle');
-                    title.innerText = "Z petli";
+                    // ancestor.classList.add('tile', 'is-ancestor');
+                    // parent.classList.add('tile', 'is-parent');
+                    column.classList.add('column');
+                    screen.style.display = "inline-block";
 
-                    list.appendChild(ancestor);
-                    ancestor.appendChild(parent);
-                    parent.appendChild(child);
-                    child.appendChild(title);
-                    child.appendChild(subtitle);
+                    list.appendChild(column);
+                    column.appendChild(screen);
+
+                    screen.appendChild(shapeContainer)
+                    screen.appendChild(info)
+
+
                 })
             }
         }

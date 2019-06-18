@@ -13,7 +13,7 @@ html, body {
 
 #list {
     text-align: center;
-    width: 600px;
+    width: 100%;
     min-height: 600px;
     margin: 0 auto;
 }
@@ -21,21 +21,31 @@ html, body {
 p {
     margin: 0;
     padding: 15px;
-    border: 1px solid $primary;
-    height: 200px;
-    width: 200px; 
+    border: 0px solid $primary;
+    height: 300px;
+    width: 300px; 
     float: left;
     position: relative;
 }
 
+.section {
+    padding: .5rem 1.5rem;
+}
+
+.column {
+    padding: 0;
+}
+
 .shape-container {
     position: relative;
-    height: 125px;
+    height: 225px;
+    display: list-item;
+    background: #323232;
 }
 
 .shape {
     margin: 0 auto;
-    border: .5px solid $primary;
+    border: 0px solid $primary;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -45,8 +55,8 @@ p {
 }
 
 object {
-    height: 60px;
-    width: 90px;
+    height: 600px;
+    width: 900px;
 }
 
 .info {
